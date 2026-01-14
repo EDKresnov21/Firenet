@@ -1,0 +1,6 @@
+@Firenet_HostAddress = http://localhost:5132
+
+GET {{Firenet_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

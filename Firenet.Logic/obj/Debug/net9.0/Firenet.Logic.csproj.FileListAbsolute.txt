@@ -1,0 +1,15 @@
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\bin\Debug\net9.0\Firenet.Logic.deps.json
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\bin\Debug\net9.0\Firenet.Logic.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\bin\Debug\net9.0\Firenet.Logic.pdb
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\bin\Debug\net9.0\Firenet.Access.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\bin\Debug\net9.0\Firenet.Access.pdb
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet.Logic.csproj.AssemblyReference.cache
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet.Logic.AssemblyInfoInputs.cache
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet.Logic.AssemblyInfo.cs
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet.Logic.csproj.CoreCompileInputs.cache
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet..8900685A.Up2Date
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet.Logic.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\refint\Firenet.Logic.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet.Logic.pdb
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\ref\Firenet.Logic.dll

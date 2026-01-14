@@ -1,0 +1,14 @@
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\bin\Debug\net9.0\Firenet.Access.deps.json
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\bin\Debug\net9.0\Firenet.Access.runtimeconfig.json
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\bin\Debug\net9.0\Firenet.Access.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\bin\Debug\net9.0\Firenet.Access.pdb
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.csproj.AssemblyReference.cache
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.AssemblyInfoInputs.cache
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.AssemblyInfo.cs
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.csproj.CoreCompileInputs.cache
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\refint\Firenet.Access.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.pdb
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.genruntimeconfig.cache
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\ref\Firenet.Access.dll

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firenet.Control", "Firenet.Control\Firenet.Control.csproj", "{0B5AF189-0A81-4B3C-890F-C71DE274BBBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firenet.Access", "Firenet.Access\Firenet.Access.csproj", "{B64DEEF3-32AA-4DBE-8BB4-B15DFCE644DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firenet.Logic", "Firenet.Logic\Firenet.Logic.csproj", "{4DA4C3BF-9684-4184-B5D2-E7FCB2EF0F10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B5AF189-0A81-4B3C-890F-C71DE274BBBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5AF189-0A81-4B3C-890F-C71DE274BBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5AF189-0A81-4B3C-890F-C71DE274BBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5AF189-0A81-4B3C-890F-C71DE274BBBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64DEEF3-32AA-4DBE-8BB4-B15DFCE644DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64DEEF3-32AA-4DBE-8BB4-B15DFCE644DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64DEEF3-32AA-4DBE-8BB4-B15DFCE644DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64DEEF3-32AA-4DBE-8BB4-B15DFCE644DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DA4C3BF-9684-4184-B5D2-E7FCB2EF0F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DA4C3BF-9684-4184-B5D2-E7FCB2EF0F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DA4C3BF-9684-4184-B5D2-E7FCB2EF0F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DA4C3BF-9684-4184-B5D2-E7FCB2EF0F10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
