@@ -1,0 +1,77 @@
+@page
+@model Firenet.Interface.Pages.CarsModel
+
+<h2>Cars</h2>
+
+<div class="row">
+    <div class="col-md-7">
+        <div class="card p-3 mb-3">
+            <h4>Cars List</h4>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>On Duty</th>
+                    <th>Free</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var car in Model.Cars)
+                {
+                <tr>
+                    <td>@car.Id</td>
+                    <td>@car.OnDuty</td>
+                    <td>@car.Free</td>
+                    <td class="d-flex gap-1">
+                        <form method="post" asp-page-handler="Edit">
+                            <input type="hidden" name="editId" value="@car.Id" />
+                            <button type="submit" class="btn btn-secondary btn-sm">
+                                Edit
+                            </button>
+                        </form>
+
+                        <form method="post" asp-page-handler="Delete">
+                            <input type="hidden" name="deleteId" value="@car.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-5">
+        <div class="card p-3 mb-3">
+            <h4>@(Model.IsEditing ? "Edit Car" : "Create Car")</h4>
+
+            <form method="post">
+                <input type="hidden" asp-for="Car.Id" />
+
+                <div class="form-check mb-3">
+                    <input asp-for="Car.OnDuty" class="form-check-input" />
+                    <label asp-for="Car.OnDuty" class="form-check-label"></label>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input asp-for="Car.Free" class="form-check-input" />
+                    <label asp-for="Car.Free" class="form-check-label"></label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    @(Model.IsEditing ? "Save Changes" : "Create")
+                </button>
+
+                @if (Model.IsEditing)
+                {
+                <a asp-page="/Cars" class="btn btn-secondary">Cancel</a>
+                }
+            </form>
+        </div>
+    </div>
+</div>

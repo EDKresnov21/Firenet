@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firenet.Access", "Firenet.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firenet.Logic", "Firenet.Logic\Firenet.Logic.csproj", "{4DA4C3BF-9684-4184-B5D2-E7FCB2EF0F10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Firenet.Interface", "Firenet.Interface\Firenet.Interface.csproj", "{16E79B45-F907-4BE3-8E87-90DB8569C771}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{4DA4C3BF-9684-4184-B5D2-E7FCB2EF0F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DA4C3BF-9684-4184-B5D2-E7FCB2EF0F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DA4C3BF-9684-4184-B5D2-E7FCB2EF0F10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16E79B45-F907-4BE3-8E87-90DB8569C771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E79B45-F907-4BE3-8E87-90DB8569C771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E79B45-F907-4BE3-8E87-90DB8569C771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E79B45-F907-4BE3-8E87-90DB8569C771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

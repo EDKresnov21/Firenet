@@ -1,0 +1,98 @@
+@page
+@model Firenet.Interface.Pages.IncidentsModel
+
+<h2>Incidents</h2>
+
+<div class="row">
+    <!-- LIST -->
+    <div class="col-md-7">
+        <div class="card p-3 mb-3">
+            <h4>Incidents List</h4>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Address</th>
+                    <th>Victim</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Plan</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var i in Model.Incidents)
+                {
+                <tr>
+                    <td>@i.Id</td>
+                    <td>@i.Address</td>
+                    <td>@i.VictimName</td>
+                    <td>@i.Type</td>
+                    <td>@i.Description</td>
+                    <td>@i.Plan</td>
+                    <td>@i.StartTime</td>
+                    <td>@i.EndTime</td>
+                    <td class="d-flex gap-1">
+                        @if (i.EndTime == null)
+                        {
+                        <form method="post" asp-page-handler="Close">
+                            <input type="hidden" name="closeId" value="@i.Id" />
+                            <button type="submit" class="btn btn-warning btn-sm">
+                                Close
+                            </button>
+                        </form>
+                        }
+
+                        <form method="post" asp-page-handler="Delete">
+                            <input type="hidden" name="deleteId" value="@i.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- CREATE FORM -->
+    <div class="col-md-5">
+        <div class="card p-3 mb-3">
+            <h4>Create Incident</h4>
+
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="Incident.Address" class="form-label"></label>
+                    <input asp-for="Incident.Address" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Incident.VictimName" class="form-label"></label>
+                    <input asp-for="Incident.VictimName" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Incident.Type" class="form-label"></label>
+                    <input asp-for="Incident.Type" class="form-control" type="number" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Incident.Description" class="form-label"></label>
+                    <textarea asp-for="Incident.Description" class="form-control"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Incident.Plan" class="form-label"></label>
+                    <textarea asp-for="Incident.Plan" class="form-control"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+
+<h1 class="mb-4">Firenet Dashboard</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card p-3 mb-3">
+            <h3>On Duty Cars</h3>
+            <ul>
+                @foreach (var id in Model.OnDutyCars)
+                {
+                    <li>Car @id</li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card p-3 mb-3">
+            <h3>Top Firefighters</h3>
+            <ol>
+                @foreach (var f in Model.FirefighterStats)
+                {
+                    <li>@f.Name @f.Surname — @f.IncidentCount incidents</li>
+                }
+            </ol>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card p-3 mb-3">
+            <h3>Incident Time Stats</h3>
+            <p>Average: @Model.IncidentStats.AverageHours h</p>
+            <p>Min: @Model.IncidentStats.MinHours h</p>
+            <p>Max: @Model.IncidentStats.MaxHours h</p>
+            <p>Total: @Model.IncidentStats.TotalHours h</p>
+        </div>
+    </div>
+</div>

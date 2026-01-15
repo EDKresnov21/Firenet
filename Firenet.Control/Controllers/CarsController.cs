@@ -34,6 +34,24 @@ public class CarsController : ControllerBase
         if (car == null) return NotFound();
         return Ok(car);
     }
+    
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateCar(int id, Car updated)
+    {
+        if (id != updated.Id)
+            return BadRequest("ID mismatch");
+
+        var car = await _db.Cars.FindAsync(id);
+        if (car == null)
+            return NotFound();
+
+        car.Free = updated.Free;
+        car.OnDuty = updated.OnDuty;
+
+        await _db.SaveChangesAsync();
+        return NoContent();
+    }
+
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteCar(int id, [FromServices] ITeamService teamService)

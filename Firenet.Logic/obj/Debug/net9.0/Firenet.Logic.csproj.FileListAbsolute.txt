@@ -13,3 +13,4 @@ C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Fire
 C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\refint\Firenet.Logic.dll
 C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet.Logic.pdb
 C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\ref\Firenet.Logic.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Logic\obj\Debug\net9.0\Firenet.Logic.sourcelink.json

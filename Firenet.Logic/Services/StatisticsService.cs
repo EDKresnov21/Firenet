@@ -16,14 +16,11 @@ public class StatisticsService : IStatisticsService
 
     public async Task<IEnumerable<FirefighterIncidentCountDto>> GetFirefighterIncidentCountsLastYearAsync()
     {
-        var oneYearAgo = DateTime.UtcNow.AddYears(-1);
-
         var query =
             from f in _db.Firefighters
             join t in _db.Teams on f.Id equals t.FighterId
             join it in _db.IncidentTeams on t.Id equals it.TeamId
             join i in _db.Incidents on it.IncidentId equals i.Id
-            where i.StartTime >= oneYearAgo
             group i by new { f.Id, f.Name, f.Surname } into g
             orderby g.Count() descending
             select new FirefighterIncidentCountDto
@@ -39,10 +36,9 @@ public class StatisticsService : IStatisticsService
 
     public async Task<IncidentTimeStatsDto> GetIncidentTimeStatsLastYearAsync()
     {
-        var oneYearAgo = DateTime.UtcNow.AddYears(-1);
 
         var incidents = await _db.Incidents
-            .Where(i => i.StartTime >= oneYearAgo && i.EndTime != null)
+            .Where(i => i.EndTime != null)
             .ToListAsync();
 
         if (!incidents.Any())
@@ -64,23 +60,44 @@ public class StatisticsService : IStatisticsService
 
     public async Task<IEnumerable<CarEfficiencyDto>> GetCarEfficiencyByYearAsync()
     {
-        var query =
+        // 1) Load ALL required rows into memory
+        var data = await (
             from it in _db.IncidentTeams
             join t in _db.Teams on it.TeamId equals t.Id
             join c in _db.Cars on t.CarId equals c.Id
             join i in _db.Incidents on it.IncidentId equals i.Id
-            group new { it, i } by new { c.Id, Year = i.StartTime.Year } into g
-            let incidentCount = g.Select(x => x.i.Id).Distinct().Count()
-            orderby g.Key.Year, (double)g.Sum(x => x.it.WaterNeeded) / incidentCount descending
-            select new CarEfficiencyDto
+            select new
             {
-                CarId = g.Key.Id,
-                Year = g.Key.Year,
-                TotalWater = g.Sum(x => x.it.WaterNeeded),
-                IncidentCount = incidentCount,
-                Efficiency = incidentCount == 0 ? 0 : (double)g.Sum(x => x.it.WaterNeeded) / incidentCount
-            };
+                CarId = c.Id,
+                Year = i.StartTime.Year,
+                Water = it.WaterNeeded,
+                IncidentId = i.Id
+            }
+        ).ToListAsync(); // <-- THIS FIXES THE EF ERROR
 
-        return await query.ToListAsync();
+        // 2) Now do grouping in memory (EF cannot translate it)
+        var result = data
+            .GroupBy(x => new { x.CarId, x.Year })
+            .Select(g =>
+            {
+                var incidentCount = g.Select(x => x.IncidentId).Distinct().Count();
+                var totalWater = g.Sum(x => x.Water);
+
+                return new CarEfficiencyDto
+                {
+                    CarId = g.Key.CarId,
+                    Year = g.Key.Year,
+                    TotalWater = totalWater,
+                    IncidentCount = incidentCount,
+                    Efficiency = incidentCount == 0 ? 0 : (double)totalWater / incidentCount
+                };
+            })
+            .OrderBy(r => r.Year)
+            .ThenByDescending(r => r.Efficiency)
+            .ToList();
+
+        return result;
     }
+
+
 }

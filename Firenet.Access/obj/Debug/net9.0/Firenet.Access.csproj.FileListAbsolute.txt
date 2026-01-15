@@ -12,3 +12,4 @@ C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\ref
 C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.pdb
 C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.genruntimeconfig.cache
 C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\ref\Firenet.Access.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Access\obj\Debug\net9.0\Firenet.Access.sourcelink.json

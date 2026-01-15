@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Firenet.Logic;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,3 +52,5 @@ static void SeedIfEmpty(FirenetContext db)
         db.SaveChanges();
     }
 }
+
+Console.WriteLine("API WORKS");

@@ -7,6 +7,4 @@ public class Firefighter
     public DateTime? VacationStart { get; set; }
     public DateTime? VacationEnd { get; set; }
     public int Task { get; set; } // 1-4
-
-    public ICollection<Team> Teams { get; set; } = new List<Team>();
 }

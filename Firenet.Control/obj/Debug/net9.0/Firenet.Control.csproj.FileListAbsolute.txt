@@ -159,3 +159,5 @@ C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Control\bin\Debug\net9.0\ru
 C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Control\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Control\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Control\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Control\obj\Debug\net9.0\Firenet.Control.sourcelink.json
+C:\Users\Admin\RiderProjects\Firenet\Firenet\Firenet.Control\bin\Debug\net9.0\Firenet.Control.staticwebassets.runtime.json

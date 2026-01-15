@@ -1,0 +1,28 @@
+@page
+@model Firenet.Interface.Pages.TeamsModel
+
+<h2>Teams</h2>
+
+<div class="card p-3 mb-3">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Car</th>
+            <th>Firefighter</th>
+            <th>Current Team</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var t in Model.Teams)
+        {
+            <tr>
+                <td>@t.Id</td>
+                <td>@t.CarId</td>
+                <td>@t.FighterId</td>
+                <td>@t.CurrentTeam</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

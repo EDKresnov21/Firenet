@@ -1,0 +1,102 @@
+@page
+@model Firenet.Interface.Pages.FirefightersModel
+
+<h2>Firefighters</h2>
+
+<div class="row">
+    <!-- LIST -->
+    <div class="col-md-7">
+        <div class="card p-3 mb-3">
+            <h4>Firefighters List</h4>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Absent</th>
+                    <th>Vacation Start</th>
+                    <th>Vacation End</th>
+                    <th>Task</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var f in Model.Firefighters)
+                {
+                    <tr>
+                        <td>@f.Id</td>
+                        <td>@f.Name</td>
+                        <td>@f.Surname</td>
+                        <td>@f.Absent</td>
+                        <td>(@f.VacationStart?.ToString("yyyy-MM-dd") ?? "-")</td>
+                        <td>(@f.VacationEnd?.ToString("yyyy-MM-dd") ?? "-")</td>
+                        <td>@f.Task</td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm"
+                                    type="submit"
+                                    form="editForm"
+                                    name="editId"
+                                    value="@f.Id">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-danger btn-sm"
+                                    type="submit"
+                                    form="deleteForm"
+                                    name="deleteId"
+                                    value="@f.Id">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="col-md-5">
+        <div class="card p-3 mb-3">
+            <h4>@(Model.IsEditing ? "Edit Firefighter" : "Create Firefighter")</h4>
+
+            <form method="post">
+                <input type="hidden" asp-for="Firefighter.Id" />
+
+                <div class="mb-3">
+                    <label asp-for="Firefighter.Name" class="form-label"></label>
+                    <input asp-for="Firefighter.Name" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Firefighter.Surname" class="form-label"></label>
+                    <input asp-for="Firefighter.Surname" class="form-control" />
+                </div>
+
+                <div class="form-check mb-3">
+                    <input asp-for="Firefighter.Absent" class="form-check-input" />
+                    <label asp-for="Firefighter.Absent" class="form-check-label"></label>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Firefighter.Task" class="form-label"></label>
+                    <input asp-for="Firefighter.Task" class="form-control" type="number" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    @(Model.IsEditing ? "Save Changes" : "Create")
+                </button>
+
+                @if (Model.IsEditing)
+                {
+                    <a asp-page="/Firefighters" class="btn btn-secondary">Cancel</a>
+                }
+            </form>
+        </div>
+    </div>
+</div>
+
+<form id="editForm" method="post" asp-page-handler="Edit"></form>
+<form id="deleteForm" method="post" asp-page-handler="Delete"></form>
