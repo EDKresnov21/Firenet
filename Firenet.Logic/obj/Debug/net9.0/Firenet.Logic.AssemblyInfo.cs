@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Firenet.Logic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1888f2ea8c681cdbaf5e61e2a07e0e312685b1b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+610d1d122fb6e749a6c6140d6dd8f243c27dc1d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Firenet.Logic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Firenet.Logic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

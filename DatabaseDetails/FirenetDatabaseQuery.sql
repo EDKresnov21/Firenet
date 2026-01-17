@@ -1,0 +1,46 @@
+USE Firenet;
+
+CREATE TABLE Cars (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    OnDuty BIT NOT NULL DEFAULT 0,
+    Free BIT NOT NULL DEFAULT 1
+);
+
+CREATE TABLE Firefighters (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL,
+    Surname NVARCHAR(100) NOT NULL,
+    Absent BIT NOT NULL DEFAULT 0,
+    VacationStart DATETIME2 NULL,
+    VacationEnd DATETIME2 NULL,
+    Task INT NOT NULL CHECK (Task BETWEEN 1 AND 4)
+);
+
+CREATE TABLE Incidents (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Address NVARCHAR(255) NOT NULL,
+    VictimName NVARCHAR(200) NOT NULL,
+    StartTime DATETIME2 NOT NULL,
+    EndTime DATETIME2 NULL,
+    Type INT NOT NULL CHECK (Type BETWEEN 1 AND 3),
+    Description NVARCHAR(MAX) NULL,
+    Plan NVARCHAR(MAX) NULL
+);
+
+CREATE TABLE Teams (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    CarId INT NOT NULL,
+    FighterId INT NOT NULL,
+    CurrentTeam BIT NOT NULL DEFAULT 0,
+    CONSTRAINT FK_Teams_Cars FOREIGN KEY (CarId) REFERENCES Cars(Id),
+    CONSTRAINT FK_Teams_Firefighters FOREIGN KEY (FighterId) REFERENCES Firefighters(Id)
+);
+
+CREATE TABLE IncidentTeams (
+    TeamId INT NOT NULL,
+    IncidentId INT NOT NULL,
+    WaterNeeded INT NOT NULL DEFAULT 0,
+    PRIMARY KEY (TeamId, IncidentId),
+    CONSTRAINT FK_IncidentTeams_Teams FOREIGN KEY (TeamId) REFERENCES Teams(Id),
+    CONSTRAINT FK_IncidentTeams_Incidents FOREIGN KEY (IncidentId) REFERENCES Incidents(Id)
+);
